@@ -29,7 +29,7 @@ namespace AzureMetric
             var dict2 = TableEntity.WriteUserObject(this.Metric, operationContext);
             foreach (var kvp in dict2)
             {
-                dict1.Add(kvp.Key, kvp.Value);
+                dict1[kvp.Key] = kvp.Value;
             }
             return dict1;
         }
