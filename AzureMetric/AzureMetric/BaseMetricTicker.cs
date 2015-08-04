@@ -60,8 +60,7 @@ namespace AzureMetric
             //flush data before close
             this.FlushAsync().Wait();
 
-            if (this.timer != null)
-                this.timer.Dispose();
+            this.timer?.Dispose();
         }
     }
 }
