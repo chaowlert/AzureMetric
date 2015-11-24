@@ -30,8 +30,7 @@ namespace AzureMetric
 
         internal void Elapse(object state)
         {
-            // ReSharper disable once CSharpWarnings::CS4014
-            this.FlushAsync();
+            this.FlushAsync().ConfigureAwait(false);
         }
 
         public virtual void Tick(T key, int value = 1)
